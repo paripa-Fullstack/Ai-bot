@@ -5,6 +5,11 @@ import sqlite3
 import requests
 from datetime import datetime, timedelta
 import json
+import threading
+from admin_web import app as admin_app
+
+def run_flask():
+    admin_app.run(host='0.0.0.0', port=5000, debug=False)
 
 # Настройка логирования
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
@@ -562,7 +567,9 @@ async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE):
 def main():
     # Инициализация базы данных
     init_db()
-    
+    flask_thread = threading.Thread(target=run_flask, daemon=True)
+flask_thread.start()
+logger.info("🌐 Веб-админка запущена на порту 5000")
     # Создание приложения
     application = Application.builder().token(BOT_TOKEN).build()
     
