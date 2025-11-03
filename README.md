@@ -232,8 +232,8 @@ SELECT * FROM payments WHERE approved = 0;
 ## 📞 Поддержка
 
 Для вопросов и предложений:
-- Telegram: @yoursupport
-- Email: your@email.com
+- Telegram: @yoursupportAI
+- Email: tread.max.by@mail.ru
 
 ## 📝 Лицензия
 
