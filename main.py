@@ -16,8 +16,8 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 
 # Константы
-BOT_TOKEN = "8341275663:AAGEItYtwThsQsDNK3IxPVPvJ5lLd2as9Cg"
-DEEPINFRA_API_KEY = "IAL10Nhs5VTjBrW5JV5AOfrCQ6APliFX"
+BOT_TOKEN = ""
+DEEPINFRA_API_KEY = ""
 DEEPINFRA_API_URL = "https://api.deepinfra.com/v1/openai/chat/completions"
 
 # Криптовалютные адреса для оплаты
